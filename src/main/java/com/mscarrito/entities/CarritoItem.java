@@ -33,5 +33,25 @@ public class CarritoItem {
     @Column(nullable = false)
     private BigDecimal total;
 
+    // Nuevos campos para almacenar firstName y lastName
+    @Column(name = "first_name", nullable = true)
+    private String firstName;
 
+    @Column(name = "last_name", nullable = true)
+    private String lastName;
+
+    // Nuevo campo para almacenar la URL de la imagen del producto
+    @Column(name = "imagen_url", nullable = true)
+    private String imagenUrl;
+
+    // Nuevo campo para almacenar el nombre del producto
+    @Column(name = "nombre_producto", nullable = true)
+    private String nombreProducto;
+
+    // Campos para almacenar los valores de las claves
+    @Column(name = "valor_clave_1", nullable = true)
+    private String valorClave1;  // Valor de la primera clave
+
+    @Column(name = "valor_clave_2", nullable = true)
+    private String valorClave2;  // Valor de la segunda clave
 }

@@ -11,4 +11,5 @@ public class ListarPocoCarrito {
     private int cantidad;
     private BigDecimal total;
     private String imagenUrl; // viene del MS-Productos
+    private Double precioUnitario;
 }

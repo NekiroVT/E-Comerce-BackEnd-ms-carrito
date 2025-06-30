@@ -83,6 +83,21 @@ public class CarritoController {
         ));
     }
 
+    @DeleteMapping("/eliminar/{combinacionId}")
+    public ResponseEntity<Void> eliminarItem(
+            @PathVariable UUID combinacionId,
+            @RequestHeader("X-User-Id") UUID usuarioId
+    ) {
+        carritoService.eliminarItemDelCarrito(combinacionId, usuarioId);
+        return ResponseEntity.ok().build();
+    }
+
+
+
+
+
+
+
 
 
 

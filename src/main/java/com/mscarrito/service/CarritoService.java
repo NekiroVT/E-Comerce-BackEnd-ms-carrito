@@ -16,6 +16,9 @@ public interface CarritoService {
 
     List<ListarPocoCarrito> listarItemsPoco(UUID usuarioId);
     List<ListarCompletoCarrito> listarItemsCompletos(UUID usuarioId);
+    void eliminarItemDelCarrito(UUID combinacionId, UUID usuarioId);
+
+
 
 
 }

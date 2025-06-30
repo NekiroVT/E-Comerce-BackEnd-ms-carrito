@@ -8,4 +8,5 @@ import java.util.UUID;
 
 public interface CarritoRepository extends JpaRepository<Carrito, UUID> {
     Optional<Carrito> findByUsuarioId(UUID usuarioId);
+
 }

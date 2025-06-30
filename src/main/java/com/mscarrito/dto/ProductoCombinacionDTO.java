@@ -12,7 +12,8 @@ public class ProductoCombinacionDTO {
     private BigDecimal precio;     // Precio actual
     private Integer stock;         // Stock disponible
     private List<String> imagenes;
-
-
+    private String nombre;
+    private String valorClave1;  // Valor de la primera clave
+    private String valorClave2;
 }
 
