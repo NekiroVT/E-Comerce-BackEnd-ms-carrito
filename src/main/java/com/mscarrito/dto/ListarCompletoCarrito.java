@@ -17,4 +17,5 @@ public class ListarCompletoCarrito {
     private String nombreProducto; // Nombre del producto
     private String firstName; // Nombre del usuario
     private String lastName; // Apellido del usuario
+    private UUID productoId;
 }

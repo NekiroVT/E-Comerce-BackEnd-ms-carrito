@@ -15,5 +15,7 @@ public class ProductoCombinacionDTO {
     private String nombre;
     private String valorClave1;  // Valor de la primera clave
     private String valorClave2;
+    private UUID productoId;
+
 }
 

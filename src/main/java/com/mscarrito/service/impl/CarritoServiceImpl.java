@@ -213,15 +213,16 @@ public class CarritoServiceImpl implements CarritoService {
             dto.setCantidad(item.getCantidad());
             dto.setTotal(item.getTotal());
 
-            // Agregar la URL de la primera imagen
+            // 👇 AQUI METES EL PRODUCTO-ID BASE 👇
+            dto.setProductoId(combinacion.getProductoId());  // 💥💥💥 Aquí es clave
+
+            // Resto de campos
             if (combinacion.getImagenes() != null && !combinacion.getImagenes().isEmpty()) {
-                dto.setImagenUrl(combinacion.getImagenes().get(0)); // Primera imagen
+                dto.setImagenUrl(combinacion.getImagenes().get(0));
             } else {
-                dto.setImagenUrl(null); // O una imagen por defecto si deseas
+                dto.setImagenUrl(null);
             }
 
-            // Asignar los valores de las claves al DTO
-            // Asumimos que la combinación tiene exactamente dos atributos (uno para cada clave)
             if (combinacion.getValorClave1() != null) {
                 dto.setValorClave1(combinacion.getValorClave1());
             }
@@ -229,16 +230,14 @@ public class CarritoServiceImpl implements CarritoService {
                 dto.setValorClave2(combinacion.getValorClave2());
             }
 
-            // Agregar el nombre del producto al DTO
             dto.setNombreProducto(combinacion.getNombre());
-
-            // Agregar los datos del usuario al DTO
             dto.setFirstName(item.getFirstName());
             dto.setLastName(item.getLastName());
 
             return dto;
         }).toList();
     }
+
 
     @Override
     public void eliminarItemDelCarrito(UUID combinacionId, UUID usuarioId) {
